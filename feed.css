@@ -1,0 +1,20 @@
+body{
+    background-color: antiquewhite;
+    color:black;
+}
+
+.form-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    
+}
+

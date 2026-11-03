@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feed.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+     <script>
+        document.getElementById("userForm").addEventListener("submit", e=>{
+            e.preventDefault();
+            fetch("https://script.google.com/a/macros/vvm.edu.in/s/AKfycbyrY5krmYLAYUErDDl9ULpkvMztQv5DI7QF3iEO__4XC2erpxkXYq4Fty3KcoFzTv4/exec", {
+                method:"POST",
+                mode:"no-cors",
+                body: new URLSearchParams(new FormData(e.target))
+            }).then(()=>{
+                alert("form submitted successfully");
+                e.target.reset();
+            });
+        });
+    </script>
+</body>
+</html>
